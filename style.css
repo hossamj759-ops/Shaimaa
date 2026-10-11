@@ -1,1 +1,183 @@
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Cairo",sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#fff8ff,#f7f2ff,#ffffff);
+overflow-x:hidden;
+color:#222;
+}
+
+/* Background */
+.blur{
+position:fixed;
+border-radius:50%;
+filter:blur(100px);
+z-index:-1;
+animation:float 8s ease-in-out infinite;
+}
+
+.blur1{
+width:350px;
+height:350px;
+background:#ff7dc8;
+top:-120px;
+right:-100px;
+}
+
+.blur2{
+width:300px;
+height:300px;
+background:#8c68ff;
+left:-120px;
+bottom:-100px;
+animation-delay:2s;
+}
+
+.blur3{
+width:250px;
+height:250px;
+background:#74e6ff;
+top:45%;
+left:40%;
+animation-delay:4s;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-40px);}
+100%{transform:translateY(0);}
+}
+
+/* NAVBAR */
+nav{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:25px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:30px;
+font-weight:bold;
+color:#7c41ff;
+}
+
+.logo i{
+font-size:35px;
+}
+
+.call{
+text-decoration:none;
+background:linear-gradient(45deg,#ff4da2,#7d43ff);
+color:white;
+padding:15px 35px;
+border-radius:50px;
+font-size:20px;
+transition:.4s;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.call:hover{
+transform:translateY(-5px);
+}
+
+/* HERO */
+.hero{
+width:90%;
+max-width:1200px;
+margin:50px auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.left{
+flex:1;
+}
+
+.welcome{
+background:#7d43ff;
+color:white;
+padding:12px 28px;
+border-radius:40px;
+font-size:20px;
+}
+
+.left h1{
+font-size:85px;
+color:#7d43ff;
+margin-top:20px;
+}
+
+.left h2{
+font-size:55px;
+color:#26335f;
+}
+
+.left p{
+font-size:24px;
+line-height:2;
+margin-top:20px;
+color:#555;
+}
+
+.buttons{
+margin-top:35px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.buttons a{
+text-decoration:none;
+padding:18px 38px;
+border-radius:50px;
+font-size:22px;
+transition:.4s;
+}
+
+.buttons a:first-child{
+background:linear-gradient(45deg,#ff4da2,#7d43ff);
+color:white;
+}
+
+.buttons a:last-child{
+background:white;
+color:#7d43ff;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.buttons a:hover{
+transform:translateY(-8px);
+}
+
+/* صورة مس شيماء */
+.right{
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.image-box{
+width:420px;
+height:520px;
+padding:8px;
+border-radius:40px;
+background:linear-gradient(45deg,#ff5fb5,#8d6bff,#6be4ff,#ffb84d);
+background-size:300% 300%;
+animation:borderAnimation 6
